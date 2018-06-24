@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		 <a id="bbb" href="http://www.jyb.cn/sy/zt/2018lh/"></a><span class="arrow">></span><a id="aaa" href="http://www.jyb.cn/sy/zt/2018lh/"></a>
+	</div>
+</body>
+<script src="js/jquery-1.11.2.js"></script>
+<script>
+	  function getUrlParam(name) {
+             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //        构造一个含有目标参数的正则表达式对象
+             var r = window.location.search.substr(1).match(reg); //匹配目标参数
+             if (r != null) return unescape(r[2]);
+             return null; //返回参数值
+         }
+        var mbid = decodeURI(getUrlParam("key"));
+        var mbid2 = decodeURI(getUrlParam("lm"));
+        // mbid = decodeURI(mbid);
+        if(mbid2!='null'){
+             $("#bbb").html(mbid2);
+        }else{
+             $("#bbb").html();
+             $(".arrow").html('')
+        }
+        $("#aaa").html(mbid);
+        // $("#bbb").html(mbid2);
+        // alert( $(".arrow").html(''));
+         console.log(mbid);
+         console.log(mbid2);
+
+// getNavNews('#js_list', 1, '新时代新气象新作为');
+var str='2018两会;';
+var str2=';';
+if(mbid2!='null'){
+   var str1=str+mbid2+str2+mbid;
+    // alert(str1); 
+}else{
+    var str1=str+mbid;
+    // alert(str1);
+}
+</script>
+</html>

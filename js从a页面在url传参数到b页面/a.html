@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<div class="content">
+		<div class="lhjj111">两会专题</div>
+		<p class="gcmtext">两会聚焦</p>
+		<span class="gcmore">更多</span>
+			
+	</div>
+	
+</body>
+<script src="js/jquery-1.11.2.js"></script>
+<script>
+	$(function(){
+		 $(".gcmore").click(function () {
+        var keytext=$(".gcmtext").text();
+        var lm=$(".lhjj111").text();
+        // alert(keytext);
+        // alert(lm);
+window.open('b.html?key='+encodeURI(encodeURI(keytext))+'&lm='+encodeURI(encodeURI(lm)));
+       
+
+    });
+	})
+	
+</script>
+</html>
